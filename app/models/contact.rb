@@ -10,7 +10,6 @@ class Contact < ActiveRecord::Base
     reference_person :string
     bank_account     :string
     email            :string
-    bussiness_level  :integer
     notes            :text
     timestamps
   end

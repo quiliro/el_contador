@@ -11,7 +11,51 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111129232307) do
+ActiveRecord::Schema.define(:version => 20111201200622) do
+
+  create_table "bussiness_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "tax_number"
+    t.string   "name"
+    t.string   "telephone_number"
+    t.string   "address"
+    t.string   "reference_person"
+    t.string   "bank_account"
+    t.string   "email"
+    t.integer  "bussiness_level"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.string   "description"
+    t.string   "measure"
+    t.integer  "stock"
+    t.decimal  "sale_price"
+    t.decimal  "purchase_price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "states", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "crypted_password",          :limit => 40
