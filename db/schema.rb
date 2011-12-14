@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111201200622) do
+ActiveRecord::Schema.define(:version => 20111214172143) do
 
   create_table "bussiness_types", :force => true do |t|
     t.string   "name"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(:version => 20111201200622) do
     t.string   "reference_person"
     t.string   "bank_account"
     t.string   "email"
-    t.integer  "bussiness_level"
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
